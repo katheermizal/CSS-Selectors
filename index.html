@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<style>
+			/*** ul li ***/
+			/*** 
+				ul li:first-child,
+				ul li:first-of-type,
+				ul li:nth-child(1),
+				ul li:nth-of-type(1) {
+						
+				}
+				****/
+			/*** 
+				ul li:last-child,
+				ul li:last-of-type{
+						
+				}
+				****/
+			/*** 
+				ul li:nth-child(odd),
+				ul li:nth-of-type(odd),
+				ul li:nth-child(even),
+				ul li:nth-of-type(even){
+						
+				}
+				****/
+			/*** 
+				Style 3, 6, 9 ....
+				ul li:nth-child(3n),
+				ul li:nth-of-type(3n){
+						
+				}
+				***/
+			/*** 
+				Style 4, 7, 10 ....
+				ul li:nth-child(3n + 1),
+				ul li:nth-of-type(3n + 1){
+						
+				}
+				***/
+			/*** 
+				Style 2, 5, 7 ....
+				ul li:nth-child(3n - 1),
+				ul li:nth-of-type(3n - 1){
+						
+				}
+				***/
+			/*** 
+				Style 2, 5, 7 ....
+				ul li:not(.red),
+				ul li:not(#red),
+				ul li:not([data-attribute="red"]){
+						
+				}
+				***/
+			/*** 
+				ul li span,
+				ul li > span, .......Immediate child element ">"
+				ul li:first-child + li a, .......Next immediate element "+"
+				ul li#red ~ li span .......Next all element "~" {
+						
+				}
+				***/
+			/***
+				ul li[id]{ color: green; }
+				ul li[id="menu-1"]{ color: red; }
+				ul li[id~="x"]{ color: pink; }
+				ul li[id*="menu"]{ color: yellow; }
+				ul li[id^="menu"]{ color: black; }
+				ul li[id$="m"]{ color: purple; }
+				***/
+				
+			/*** 
+				Example 1	
+				ul { padding: 0; margin: 0; list-style: none;}
+				ul li {
+					float: left;
+					width: 20%; 
+					height: 50px;
+					margin: 0 0 10px;
+					background: red; 
+				}
+				
+				ul li:nth-child(3n + 1) {
+					clear: left;
+				}
+				
+				ul li:not(.red){
+					background: #eee;
+				}
+				***/	
+				
+			
+			/*** 
+				Example 2 ***/				
+				ul li span {
+					color: red;
+				}
+				
+				ul li > span {
+					color: yellow;
+				}
+				
+				ul li:first-child + li a {
+					color: pink;
+				}
+				
+				ul li#red ~ li span {
+					color: gray;
+				}
+				
+		</style>
+	</head>
+	<body>
+		<!--ul>
+			<li><span>Aslsl<span>Aslsl</span></span></li>
+			<li class="red"><a href="#">Aslsl</a></li>
+			<li>Aslsl</li>
+			<li><a href="#">Aslsl</a></li>
+			<li id="red">Aslsl</li> 
+			<li data-attribute="red">Aslsl</li>
+			<li>
+				<span>Aslsl<span>Aslsl</span></span>
+				<ul>
+					<li>Aslsl</li>
+					<li>
+						<span>Aslsl</span>
+						<ul>
+							<li>Aslsl</li>
+							<li>Aslsl</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Aslsl</li>
+			<li>Aslsl</li>
+			<li><a href="#">Aslsl</a></li>
+			<li>
+				<span>Aslsl</span>
+				<ul>
+					<li>Aslsl</li>
+					<li>
+						<span>Aslsl</span>
+						<ul>
+							<li>Aslsl</li>
+							<li>Aslsl</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Aslsl</li>
+			<li>
+				<span>Aslsl</span>
+				<ul>
+					<li>Aslsl</li>
+					<li>
+						<span>Aslsl</span>
+						<ul>
+							<li>Aslsl</li>
+							<li>Aslsl</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Aslsl</li>
+		</ul-->
+		
+		<ul>
+			<li id="menu-1 x" >Aslsl</li>
+			<li id="menu-2 m">Aslsl</li>
+			<li id="menu-3 x">Aslsl</li>
+			<li id="a menu-4">Aslsl</li>
+			<li id="menu-5">Aslsl</li>
+			<li id="menu-6">Aslsl</li>
+		</ul>
+	</body>
+</html>
